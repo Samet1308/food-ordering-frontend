@@ -44,13 +44,13 @@ export class LoginComponent {
         }
         StorageService.saveToken(res.jwt)
         StorageService.saveUser(user)
-        // if(StorageService.isAdminLoggedIn()){
-        //   this.router.navigateByUrl("admin/dashboard")
-        // }else if(StorageService.isCustomerLoggedIn()){
-        //   this.router.navigateByUrl("customer/dashboard")
-        // }else{
-        //   this.message.error("Yanlış Kimlik", {nzDuration: 50000})
-        // }
+        if(StorageService.isAdminLoggedIn()){
+          this.router.navigateByUrl("admin/dashboard")
+        }else if(StorageService.isCustomerLoggedIn()){
+          this.router.navigateByUrl("customer/dashboard")
+        }else{
+          this.message.error("Yanlış Kimlik", {nzDuration: 50000})
+        }
       }
     })
   }

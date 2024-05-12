@@ -12,7 +12,7 @@ import {Router} from "@angular/router";
 })
 export class SignupComponent {
 
-  isSpinning: boolean;
+  isSpinning?: boolean;
   signupForm!: FormGroup;
 constructor(private formBuilder: FormBuilder,
             private authService: AuthService,
