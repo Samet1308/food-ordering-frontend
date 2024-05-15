@@ -9,12 +9,16 @@ import {NzFormDirective, NzFormItemComponent} from "ng-zorro-antd/form";
 import {NzOptionComponent, NzSelectComponent} from "ng-zorro-antd/select";
 import {NzInputDirective} from "ng-zorro-antd/input";
 import {NzButtonComponent} from "ng-zorro-antd/button";
+import { FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
+import { PostProductComponent } from './admin-components/post-product/post-product.component';
 
 
 @NgModule({
   declarations: [
     DashboardComponent,
-    AddCategoryComponent
+    AddCategoryComponent,
+    PostProductComponent
   ],
   imports: [
     CommonModule,
@@ -26,7 +30,10 @@ import {NzButtonComponent} from "ng-zorro-antd/button";
     NzInputDirective,
     NzButtonComponent,
     NzFormDirective,
-    NzRowDirective
+    NzRowDirective,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ]
 })
 export class AdminModule { }
