@@ -20,11 +20,35 @@ export class AdminService {
       })
   }
   getAllCategories(): Observable<any> {
-    return  this.httpClient.post<[]>(BASIC_URL+"/api/admin/categories",
+    return  this.httpClient.get<[]>(BASIC_URL+"/api/admin/categories",
       {
         headers:this.createAuthorizationHeader()
       })
   }
+
+  getAllCategoriesByTitle(title:string): Observable<any> {
+    return  this.httpClient.get<[]>(BASIC_URL+`/api/admin/categories/${title}`,
+      {
+        headers:this.createAuthorizationHeader()
+      })
+  }
+
+  //Product Operations
+
+  postProduct( categoryId:number, productDto: any): Observable<any> {
+    return  this.httpClient.post<[]>(BASIC_URL+`/api/admin/${categoryId}/product`,productDto,
+      {
+        headers:this.createAuthorizationHeader()
+      })
+  }
+  getProductsByCategory(categoryId:number): Observable<any> {
+    return  this.httpClient.get<[]>(BASIC_URL+`/api/admin/${categoryId}/products`,
+      {
+        headers:this.createAuthorizationHeader()
+      })
+  }
+
+
   createAuthorizationHeader():HttpHeaders{
     let authHeaders:HttpHeaders = new HttpHeaders()
     return authHeaders.set(
