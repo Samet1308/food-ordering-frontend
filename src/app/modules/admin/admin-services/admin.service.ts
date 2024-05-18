@@ -48,6 +48,21 @@ export class AdminService {
       })
   }
 
+  getProductsByCategoryAndTitle(categoryId:number, title:string): Observable<any> {
+    return  this.httpClient.get<[]>(BASIC_URL+`/api/admin/${categoryId}/product/${title}`,
+      {
+        headers:this.createAuthorizationHeader()
+      })
+  }
+
+  deleteProduct(productId:number): Observable<any> {
+    return  this.httpClient.delete<[]>(BASIC_URL+`/api/admin/product/${productId}`,
+      {
+        headers:this.createAuthorizationHeader()
+      })
+  }
+
+
 
   createAuthorizationHeader():HttpHeaders{
     let authHeaders:HttpHeaders = new HttpHeaders()

@@ -31,11 +31,16 @@ export class StorageService {
     return null;
   }
 
-  static getUser(){
-    if (typeof window !== "undefined") {
-      return JSON.parse(localStorage.getItem(USER) as string)
+  static getUser():any{
+      return JSON.parse(localStorage.getItem(USER))
+  }
+
+  static getUserId():any{
+    const user = this.getUser()
+    if(user == null){
+      return ""
     }
-    return null;
+    return user.id
   }
 
   static getUserRole():string{
@@ -58,5 +63,9 @@ export class StorageService {
 
     const role :string = this.getUserRole()
     return role == "CUSTOMER"
+  }
+  static logout(){
+    window.localStorage.removeItem(TOKEN)
+    window.localStorage.removeItem(USER)
   }
 }

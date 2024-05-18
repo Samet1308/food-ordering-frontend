@@ -1,0 +1,32 @@
+<!--<form nz-form [formGroup]="validateForm" style="margin-top: 20px; text-align: center" (submit)="submitForm()">-->
+<!--  <input nz-input placeholder="Arama" nzSize="large" style="width: 20%" formControlName="title"/>-->
+<!--  <button nz-button [nzSize]="size" nzType="primary" style="margin-left: 15px;">Ara</button>-->
+<!--</form>-->
+
+<div style="background-color:#c7dbff; min-height: 91vh;">
+
+  <div style="padding-top: 10px">
+
+    <div style="margin-top:10px;background-color:#ffe567" class="child" *ngFor="let product of Products">
+      <div nz-row>
+        <div nz-col nzSpan="8">
+          <img class="profile" style="height: 130px; width: 200px; border-radius: 10px;"
+               [src]="product.processedImg" alt="profile"/>
+        </div>
+        <div nz-col nzSpan="16">
+          <h2 style="cursor:pointer; color:#108ee9">
+            {{product.name}}</h2>
+          <hr>
+          <h5>Fiyat:<b class="product-price">{{product.price}} TL</b>
+            -Açıklama: <b>{{product.description}}</b>
+            -Yemek Çeşidi: <b>{{product.categoryName}}</b>
+          </h5>
+          <hr>
+          <button nzSize="small" nz-button nzType="primary" style="margin-left: 10px;"
+                  (click)="addToCart(product.id)">Sepete Ekle</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,10 +1,10 @@
-<div class="bg" style="background-color: #F8F8F8;">
+<div class="bg-container" style="background-image: url('https://media.istockphoto.com/id/1388138709/tr/fotoğraf/many-kinds-of-food-on-the-table-local-foods-named-izmir-köfte-hünkar-beğendi-and-etli.jpg?s=1024x1024&w=is&k=20&c=hMREqeV42cpKWnYkVwPvgkojLZWVuHFAvh3iRXKx4co=');">
   <nz-spin [nzSpinning]="isSpinning" [nzSize]="'large'" nzTip = "Working..">
-    <div class="parent">
+    <div class="parent login-form-container">
       <div class="child">
         <div nz-row class="imgDiv">
           <div nz-col nzSpan="24">
-            <h1 style="margin-left: 100px">Login </h1>
+            <h1 style="margin-left: 100px">Giriş Yap </h1>
           </div>
         </div>
 
@@ -13,7 +13,7 @@
           <nz-form-item>
             <nz-form-control nzErrorTip="E-Postanızı Giriniz.">
               <nz-input-group nzPrefixIcon="user">
-                <input type="text" nz-input placeholder="E-mail" formControlName="email"/>
+                <input type="text" nz-input placeholder="E-Posta" formControlName="email"/>
               </nz-input-group>
             </nz-form-control>
           </nz-form-item>
@@ -21,7 +21,7 @@
           <nz-form-item>
             <nz-form-control nzErrorTip="Şifrenizi Giriniz.">
               <nz-input-group nzPrefixIcon="lock">
-                <input type="password" nz-input placeholder="Password" formControlName="password"/>
+                <input type="password" nz-input placeholder="Şifre" formControlName="password"/>
               </nz-input-group>
             </nz-form-control>
           </nz-form-item>

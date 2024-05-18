@@ -1,0 +1,43 @@
+<div class="bg-container">
+  <div *ngIf="cartItems.length > 0; else emptyCart">
+    <div class="cart-container">
+      <div class="cart-item" *ngFor="let item of cartItems"> <div class="product-info">
+        <div class="product-image">
+          <img [src]="item.processedImg" alt="product-image" /> </div>
+        <div class="product-details">
+          <div class="item-row">
+            <div class="item-name" [ngClass]="{ 'highlight': item.highlighted }"> {{item.productName }}
+            </div>
+            <div class="item-price">{{item.price | currency:'₺'}}</div>
+            <div class="quantity-controls">
+              <button nz-button nzType="text" [disabled]="item.quantity == 1" nzShape="circle">
+                <i nz-icon nzType="minus-circle-outline"></i>
+              </button>
+              <span class="quantity">{{item.quantity}}</span>
+              <button nz-button nzType="text" [disabled]="item.quantity == 1" nzShape="circle">
+                <i nz-icon nzType="plus-circle-outline"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="total-price">
+        Total Amount: {{ order.totalAmount | currency:'₺'}}
+      </div>
+      <div class="total-price">
+        Amount: {{order.amount|currency:'₺'}}
+      </div>
+      <div>
+        <button nz-button nzType="primary" nzShape="round">Place Order</button>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #emptyCart>
+  <div class="empty-cart">
+    <i nz-icon nzType="shopping-cart"></i>
+    <span>Henüz gösterilecek bir sipariş yok.</span>
+  </div>
+</ng-template>

@@ -46,7 +46,7 @@ export class PostProductComponent {
       if (res.id != null) {
         this.message
           .success(
-            `Product Posted Successfully.`, {nzDuration: 5000}
+            `Ürün Başarıyla Eklendi.`, {nzDuration: 5000}
           );
         this.router.navigateByUrl('/admin/dashboard');
       } else {
@@ -58,7 +58,8 @@ export class PostProductComponent {
 
 
   onFileSelected (event: any) {
-    this.selectedFile = event.target.files[0]; this.previewImage();
+    this.selectedFile = event.target.files[0];
+    this.previewImage();
   }
 
   previewImage() {

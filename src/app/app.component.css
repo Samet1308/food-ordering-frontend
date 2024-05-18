@@ -3,6 +3,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%; /* Navbar'ın genişliği */
+  height: 80px; /* Navbar'ın yüksekliği */
 
 .navbar-title{
   >a{
