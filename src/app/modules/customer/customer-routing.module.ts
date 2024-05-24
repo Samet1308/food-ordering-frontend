@@ -5,9 +5,11 @@ import {
   ViewProductsCategoryComponent
 } from "./customer-components/view-products-category/view-products-category.component";
 import {CartComponent} from "./customer-components/cart/cart.component";
+import {AboutUsComponent} from "./customer-components/about-us/about-us.component";
 
 const routes: Routes = [
   {path: "dashboard", component:DashboardComponent},
+  {path: "about", component: AboutUsComponent},
   {path: ":categoryId/products", component:ViewProductsCategoryComponent},
   {path: "cart", component:CartComponent}
 ];

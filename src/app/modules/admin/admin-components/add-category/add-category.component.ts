@@ -1,6 +1,8 @@
 import { Component } from "@angular/core";
 import {AdminService} from "../../admin-services/admin.service";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {NzMessageService} from "ng-zorro-antd/message";
+import {Router} from "@angular/router";
 
 
 
@@ -16,7 +18,9 @@ export class AddCategoryComponent {
 
   constructor(
     private adminService:AdminService,
-    private formBuilder: FormBuilder) {
+    private formBuilder: FormBuilder,
+    private message: NzMessageService,
+    private router: Router) {
   }
 
   ngOnInit(){
@@ -37,6 +41,16 @@ export class AddCategoryComponent {
     this.adminService.postCategory(formData).subscribe(
       (res)=>{
         console.log(res)
+        if (res.id != null) {
+          this.message
+            .success(
+              `Ürün Başarıyla Eklendi.`, {nzDuration: 5000}
+            );
+          this.router.navigateByUrl('/admin/dashboard');
+        } else {
+          this.message.error(
+            `Something went wrong`, {nzDuration: 5000})
+        }
       }
     )
   }

@@ -11,24 +11,25 @@ import {NzGridModule} from "ng-zorro-antd/grid";
 import {NzInputModule} from "ng-zorro-antd/input";
 import {NzSpinModule} from "ng-zorro-antd/spin";
 import {NzWaveModule} from "ng-zorro-antd/core/wave";
+import {NzLayoutModule} from "ng-zorro-antd/layout"
 
-import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
-import { MatInputModule } from '@angular/material/input';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatSelectModule } from '@angular/material/select';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { MatChipsModule } from '@angular/material/chips';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatMenuModule } from '@angular/material/menu';
-import { MatRadioModule } from '@angular/material/radio';
-import { MatDividerModule } from '@angular/material/divider';
-import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatNativeDateModule } from '@angular/material/core';
-import { MatDialogModule } from '@angular/material/dialog';
-import { MatTableModule } from '@angular/material/table';
+// import { MatButtonModule } from '@angular/material/button';
+// import { MatCardModule } from '@angular/material/card';
+// import { MatInputModule } from '@angular/material/input';
+// import { MatToolbarModule } from '@angular/material/toolbar';
+// import { MatSelectModule } from '@angular/material/select';
+// import { MatFormFieldModule } from '@angular/material/form-field';
+// import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+// import { MatSnackBarModule } from '@angular/material/snack-bar';
+// import { MatChipsModule } from '@angular/material/chips';
+// import { MatPaginatorModule } from '@angular/material/paginator';
+// import { MatMenuModule } from '@angular/material/menu';
+// import { MatRadioModule } from '@angular/material/radio';
+// import { MatDividerModule } from '@angular/material/divider';
+// import { MatDatepickerModule } from '@angular/material/datepicker';
+// import { MatNativeDateModule } from '@angular/material/core';
+// import { MatDialogModule } from '@angular/material/dialog';
+// import { MatTableModule } from '@angular/material/table';
 
 import {en_US, NZ_I18N} from "ng-zorro-antd/i18n";
 import {NzHeaderComponent} from "ng-zorro-antd/layout";
@@ -59,25 +60,26 @@ registerLocaleData(en);
     NzSpinModule,
     NzWaveModule,
     NzHeaderComponent,
-    MatIconModule, MatButtonModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatToolbarModule,
-    MatSelectModule,
-    MatIconModule,
-    MatProgressSpinnerModule,
-    MatSnackBarModule,
-    MatPaginatorModule,
-    MatChipsModule,
-    MatMenuModule,
-    MatRadioModule,
-    MatDividerModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
-    MatRadioModule,
-    MatDialogModule,
-    MatTableModule
+    NzLayoutModule,
+    // MatIconModule, MatButtonModule,
+    // MatCardModule,
+    // MatFormFieldModule,
+    // MatInputModule,
+    // MatToolbarModule,
+    // MatSelectModule,
+    // MatIconModule,
+    // MatProgressSpinnerModule,
+    // MatSnackBarModule,
+    // MatPaginatorModule,
+    // MatChipsModule,
+    // MatMenuModule,
+    // MatRadioModule,
+    // MatDividerModule,
+    // MatDatepickerModule,
+    // MatNativeDateModule,
+    // MatRadioModule,
+    // MatDialogModule,
+    // MatTableModule
 
 
   ],

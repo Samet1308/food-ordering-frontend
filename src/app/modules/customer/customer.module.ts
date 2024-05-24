@@ -10,13 +10,15 @@ import {NzInputDirective} from "ng-zorro-antd/input";
 import {ReactiveFormsModule} from "@angular/forms";
 import { ViewProductsCategoryComponent } from './customer-components/view-products-category/view-products-category.component';
 import { CartComponent } from './customer-components/cart/cart.component';
+import { AboutUsComponent } from './customer-components/about-us/about-us.component';
 
 
 @NgModule({
   declarations: [
     ViewProductsCategoryComponent,
     DashboardComponent,
-    CartComponent
+    CartComponent,
+    AboutUsComponent
   ],
   imports: [
     CommonModule,
