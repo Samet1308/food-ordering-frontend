@@ -1,12 +1,11 @@
 <div class="bg" style="background-color: #F8F8F8; background-image: url('https://media.istockphoto.com/id/1388138709/tr/fotoğraf/many-kinds-of-food-on-the-table-local-foods-named-izmir-köfte-hünkar-beğendi-and-etli.jpg?s=1024x1024&w=is&k=20&c=hMREqeV42cpKWnYkVwPvgkojLZWVuHFAvh3iRXKx4co=');">
- style=">
 
   <nz-spin [nzSpinning]="isSpinning" [nzSize]="'large'" nzTip = "Working..">
     <div class="parent">
       <div class="child">
         <div nz-row class="imgDiv">
           <div nz-col nzSpan="24">
-            <h1 style="margin-left: 80px">Kaydol</h1>
+            <h1 style="margin-left: 100px">Kaydol</h1>
           </div>
         </div>
 
@@ -14,13 +13,13 @@
 
           <nz-form-item>
             <nz-form-control nzHasFeedback nzErrorTip="Geçerli Bir E-posta Giriniz.">
-              <input nz-input placeholder="E-mail" id="email" formControlName="email"/>
+              <input nz-input placeholder="E-Posta" id="email" formControlName="email"/>
             </nz-form-control>
           </nz-form-item>
 
           <nz-form-item>
             <nz-form-control nzHasFeedback [nzErrorTip]="userErrorTpl">
-              <input nz-input placeholder="Name" id="username" formControlName="name"/>
+              <input nz-input placeholder="İsim" id="username" formControlName="name"/>
               <ng-template #userErrorTpl let-control>
                 <ng-container *ngIf="control.hasError('required')">
                   Lütfen Kullanıcı Adınızı Giriniz.
@@ -31,7 +30,7 @@
 
           <nz-form-item>
             <nz-form-control nzHasFeedback [nzErrorTip]="errorPass">
-              <input nz-input placeholder="Password" type="password" id="password" formControlName="password"/>
+              <input nz-input placeholder="Parola" type="password" id="password" formControlName="password"/>
               <ng-template #errorPass let-control>
                 <ng-container *ngIf="control.hasError('required')">
                   Geçerli Bir Şifre Giriniz.
@@ -46,7 +45,7 @@
 
           <nz-form-item>
             <nz-form-control nzHasFeedback [nzErrorTip]="errorTpl">
-              <input nz-input placeholder="Confirm Password" type="password" id="checkPassword" formControlName="checkPassword"/>
+              <input nz-input placeholder="Parola (Tekrar)   " type="password" id="checkPassword" formControlName="checkPassword"/>
               <ng-template #errorTpl let-control>
                 <ng-container *ngIf="control.hasError('required')">
                   Lütfen şifrenizi doğrulayınız!
@@ -59,8 +58,8 @@
           </nz-form-item>
 
 
-          <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'" (click)="register()" >Register</button>
-          Or <a routerLink="/login">Login Now!</a>
+          <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'" (click)="register()" >Kaydol</button>
+          Ya Da <a routerLink="/login">Giriş Yap!</a>
         </form>
       </div>
     </div>

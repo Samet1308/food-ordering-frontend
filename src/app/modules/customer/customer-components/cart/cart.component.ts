@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import {CustomerService} from "../../customer-service/customer.service";
 import {FormBuilder} from "@angular/forms";
+import {PlaceOrderComponent} from "../place-order/place-order.component";
+
+import {MatDialog} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-cart',
@@ -14,6 +17,7 @@ export class CartComponent {
   constructor(
     private customerService : CustomerService,
     private formBuilder: FormBuilder,
+    private dialog : MatDialog
   ) {}
 
 
@@ -31,5 +35,8 @@ export class CartComponent {
       })
     })
   }
+    placeOrder(){
+    this.dialog.open(PlaceOrderComponent)
+    }
 
 }

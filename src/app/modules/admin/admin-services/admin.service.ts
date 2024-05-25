@@ -62,6 +62,13 @@ export class AdminService {
       })
   }
 
+  getPlaceOrders(): Observable<any> {
+    return  this.httpClient.get<[]>(BASIC_URL+"/api/admin/placeOrders",
+      {
+        headers:this.createAuthorizationHeader()
+      })
+  }
+
 
 
   createAuthorizationHeader():HttpHeaders{

@@ -12,7 +12,7 @@
                [src]="category.processedImg" alt="profile"/>
         </div>
         <div nz-col nzSpan="16">
-          <h2 style="cursor:pointer; color:#108ee9">
+          <h2 style="cursor:pointer; color:#108ee9" routerLink="/customer/{{category.id}}/products" >
             {{category.name}}</h2>
           <hr>
           <h5>Description:<b>{{category.description}}</b></h5>

@@ -14,6 +14,21 @@ import {PostProductComponent} from './admin-components/post-product/post-product
 import {NzSpinComponent} from "ng-zorro-antd/spin";
 import {ViewProductsComponent} from './admin-components/view-products/view-products.component';
 import {AddCategoryComponent} from "./admin-components/add-category/add-category.component";
+import { OrdersComponent } from './admin-components/orders/orders.component';
+import {MatCard, MatCardContent, MatCardTitle} from "@angular/material/card";
+import {MatFormField, MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
+import {MatButton} from "@angular/material/button";
+import {
+  MatCell,
+  MatCellDef,
+  MatColumnDef,
+  MatHeaderCell,
+  MatHeaderCellDef,
+  MatHeaderRow,
+  MatTable
+} from "@angular/material/table";
+import {MatMenu, MatMenuTrigger} from "@angular/material/menu";
 
 
 @NgModule({
@@ -21,24 +36,42 @@ import {AddCategoryComponent} from "./admin-components/add-category/add-category
     DashboardComponent,
     PostProductComponent,
     ViewProductsComponent,
-    AddCategoryComponent
+    AddCategoryComponent,
+    OrdersComponent
 
   ],
-    imports: [
-        CommonModule,
-        AdminRoutingModule,
-        NzColDirective,
-        NzFormItemComponent,
-        NzSelectComponent,
-        NzOptionComponent,
-        NzInputDirective,
-        NzButtonComponent,
-        NzFormDirective,
-        NzRowDirective,
-        FormsModule,
-        ReactiveFormsModule,
-        HttpClientModule,
-        NzSpinComponent,
-    ]
+  imports: [
+    CommonModule,
+    AdminRoutingModule,
+    NzColDirective,
+    NzFormItemComponent,
+    NzSelectComponent,
+    NzOptionComponent,
+    NzInputDirective,
+    NzButtonComponent,
+    NzFormDirective,
+    NzRowDirective,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    NzSpinComponent,
+    MatCardContent,
+    MatCardTitle,
+    MatFormField,
+    MatCard,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButton,
+    MatTable,
+    MatColumnDef,
+    MatHeaderCell,
+    MatCell,
+    MatHeaderCellDef,
+    MatCellDef,
+    MatMenu,
+    MatMenuTrigger,
+    MatHeaderRow,
+
+  ]
 })
 export class AdminModule { }

@@ -24,13 +24,13 @@
       </div>
 
       <div class="total-price">
-        Total Amount: {{ order.totalAmount | currency:'₺'}}
+        Toplam Tutar: {{ order.totalAmount | currency:'₺'}}
       </div>
       <div class="total-price">
-        Amount: {{order.amount|currency:'₺'}}
+        Tutar: {{order.amount|currency:'₺'}}
       </div>
       <div>
-        <button nz-button nzType="primary" nzShape="round">Place Order</button>
+        <button nz-button nzType="primary" nzShape="round" (click)="placeOrder()">Siparişi Tamamla</button>
       </div>
     </div>
   </div>
